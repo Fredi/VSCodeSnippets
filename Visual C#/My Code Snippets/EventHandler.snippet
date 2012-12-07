@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<CodeSnippet xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet" Format="1.0.0">
+	<Header>
+		<Author>Aaron Powell</Author>
+		<Description>Creates an Event Handler</Description>
+		<Title>Add Event Handler</Title>
+		<Shortcut>eh</Shortcut>
+		<SnippetTypes>
+			<SnippetType>Expansion</SnippetType>
+		</SnippetTypes>
+	</Header>
+	<Snippet>
+		<Declarations>
+			<Literal>
+				<ID>methodName</ID>
+				<Default>EventHandlerName</Default>
+				<ToolTip>Replace with the event handler name</ToolTip>
+			</Literal>
+			<Literal>
+				<ID>eventArgsType</ID>
+				<Default>EventArgs</Default>
+				<ToolTip>Replace with the events arguments type</ToolTip>
+			</Literal>
+		</Declarations>
+		<Code Language="CSharp">
+			<![CDATA[protected void $methodName$(object sender, $eventArgsType$ e)
+				{
+					$end$
+				}]]>
+		</Code>
+	</Snippet>
+</CodeSnippet>

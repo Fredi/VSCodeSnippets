@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippet Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>Connection String</Title>
+    <Author>Aaron Powell, Fredi Machado</Author>
+    <Shortcut>connstr</Shortcut>
+    <Description>Creates a connection string</Description>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+	  <SnippetType>SurroundsWith</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>db</ID>
+        <ToolTip>Connection String key</ToolTip>
+        <Default>DefaultConnection</Default>
+      </Literal>
+	  <Literal>
+	    <ID>catalog</ID>
+		<ToolTip>Initial Catalog</ToolTip>
+		<Default>MyAppDb</Default>
+	  </Literal>
+    </Declarations>
+    <Code Language="XML"><![CDATA[  <connectionStrings>
+	<add name="$db$"
+			connectionString="Data Source=(LocalDb)\v11.0;Initial Catalog=$catalog$;Integrated Security=SSPI;AttachDBFilename=|DataDirectory|\$catalog$.mdf"
+			providerName="System.Data.SqlClient" />$end$
+  </connectionStrings>
+]]></Code>
+  </Snippet>
+</CodeSnippet>
