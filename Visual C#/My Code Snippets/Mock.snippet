@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<CodeSnippet xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet" Format="1.0.0">
+	<Header>
+		<Author>Fredi Machado</Author>
+		<Description>Creates a Mock using Moq</Description>
+		<Title>Create a Mock</Title>
+		<Shortcut>moq</Shortcut>
+		<SnippetTypes>
+			<SnippetType>Expansion</SnippetType>
+		</SnippetTypes>
+	</Header>
+	<Snippet>
+		<Declarations>
+			<Literal>
+				<ID>varName</ID>
+				<Default>mock</Default>
+				<ToolTip>Replace with the name of the variable</ToolTip>
+			</Literal>
+			<Literal>
+				<ID>interfaceName</ID>
+				<Default>Object</Default>
+				<ToolTip>Replace with the name of the interface to Mock</ToolTip>
+			</Literal>
+		</Declarations>
+		<Code Language="CSharp">
+			<![CDATA[var $varName$ = new Mock<$interfaceName$>();$end$]]>
+		</Code>
+	</Snippet>
+</CodeSnippet>
