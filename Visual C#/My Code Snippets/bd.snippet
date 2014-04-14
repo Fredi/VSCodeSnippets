@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>bd</Title>
+            <Shortcut>bd</Shortcut>
+            <Description>Cria o using statement para uso do banco de dados</Description>
+            <Author>frederico.machado@e-tab.com.br</Author>
+            <SnippetTypes>
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Imports>
+                <Import>
+                    <Namespace>SolucaoNotarial.Infraestrutura</Namespace>
+					<Namespace>SolucaoNotarial.Core</Namespace>
+                </Import>
+            </Imports>
+            <Declarations />
+            <Code Language="csharp">
+                <![CDATA[using (var bd = Dependencias.Buscar<IUnidadeTrabalho>())
+        {
+            $end$
+        }]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>
